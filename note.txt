@@ -1,0 +1,34 @@
+Library: 
+1. gradio = UI
+2. ast = math expression safe-user (not use eval)
+3. operator = Aritmathic function; add, sub
+4. math = Math function; sqrt()
+
+Whitelist Operator:
+    AST        Operator         Function  
+- `ast.Add`    `+`              add             
+- `ast.Sub`    `-`              subtract             
+- `ast.Mult`   `*`              multiply               
+- `ast.Div`    `/`              divide               
+- `ast.Pow`    `**`             squared 
+-  `ast.USub`   unary minus     negative
+
+Code Summary:
+- safe_eval: If node = number, then return value
+- Operator check (Binary, Unary)
+- Function call
+- Parsed expression; AST make a tree structure, then _eval() process node
+- calculate_expression; initiate calculate, log error
+- Convertion float -> fraction
+- Gradio UI (Keypad, dark|light mode)
+
+Function:
+- add
+- subtract
+- multiply
+- divide
+- squared
+- Trigonometry (sin, cos, tan)
+- square root
+- Convert Dec - fraction
+- Theme (Dark & Light)
